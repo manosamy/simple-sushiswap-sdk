@@ -3,36 +3,26 @@ import { ErrorCodes } from '../errors/error-codes';
 import { SushiswapError } from '../errors/sushiswap-error';
 
 /**
- * USDC token context CHANGE CONTRACT ADDRESS INFO ETC
+ * FLEATO token context CHANGE CONTRACT ADDRESS INFO ETC
  */
-export class USDC {
-  public static MAINNET() {
-    return {
-      chainId: ChainId.MAINNET,
-      contractAddress: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
-      decimals: 18,
-      symbol: 'USDC',
-      name: 'USD Coin',
-    };
-  }
-
+export class FLEATO {
   public static MATIC() {
     return {
       chainId: ChainId.MATIC,
-      contractAddress: '0x90A49b254a017C4Fc2E22a732097d6d17752d855',
+      contractAddress: '0xaD2a6255264D1dEf7EbEC64FA531F247a215A549',
       decimals: 18,
-      symbol: 'USDC',
-      name: 'USD Coin',
+      symbol: 'FLEATO',
+      name: 'fleato',
     };
   }
 
   public static MUMBAI() {
     return {
       chainId: ChainId.MUMBAI,
-      contractAddress: '0x90A49b254a017C4Fc2E22a732097d6d17752d855',
+      contractAddress: '0xaD2a6255264D1dEf7EbEC64FA531F247a215A549',
       decimals: 18,
-      symbol: 'USDC',
-      name: 'USD Coin',
+      symbol: 'FLEATO',
+      name: 'fleato',
     };
   }
 
@@ -42,8 +32,6 @@ export class USDC {
    */
   public static token(chainId: ChainId | number) {
     switch (chainId) {
-      case ChainId.MAINNET:
-        return this.MAINNET();
       case ChainId.MATIC:
         return this.MATIC();
       case ChainId.MUMBAI:

@@ -13,6 +13,8 @@ import { DAI } from '../../common/tokens/dai';
 import { USDC } from '../../common/tokens/usdc';
 import { USDT } from '../../common/tokens/usdt';
 import { WETH } from '../../common/tokens/weth';
+import { WBTC } from '../../common/tokens/wbtc';
+import { FLEATO } from '../../common/tokens/fleato';
 import { formatEther } from '../../common/utils/format-ether';
 import { hexlify } from '../../common/utils/hexlify';
 import { onlyUnique } from '../../common/utils/only-unique';
@@ -55,6 +57,8 @@ export class SushiswapRouterFactory {
         this.mainCurrenciesPairsForDAI,
         this.mainCurrenciesPairsForUSDC,
         this.mainCurrenciesPairsForWETH,
+        // this.mainCurrenciesPairsForWBTC,
+        // this.mainCurrenciesPairsForFLEATO,
         [[this._fromToken, this._toToken]],
       ];
     } else {
@@ -659,4 +663,13 @@ export class SushiswapRouterFactory {
   private get WETHTokenForConnectedNetwork() {
     return WETH.token(this._ethersProvider.provider.network.chainId);
   }
+
+  private get WBTCTokenForConnectedNetwork() {
+    return WBTC.token(this._ethersProvider.provider.network.chainId);
+  }
+
+  private get FLEATOTokenForConnectedNetwork() {
+    return FLEATO.token(this._ethersProvider.provider.network.chainId);
+  }
+
 }

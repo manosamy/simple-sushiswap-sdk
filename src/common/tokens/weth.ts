@@ -57,6 +57,25 @@ export class WETH {
     };
   }
 
+  public static MUMBAI() {
+    return {
+      chainId: ChainId.MUMBAI,
+      contractAddress: '0x454B666432f76C1DF80867e6BDE8EaFe753D6230',
+      decimals: 18,
+      symbol: 'WETH',
+      name: 'Wrapped Ether',
+    };
+  }
+
+  public static MATIC() {
+    return {
+      chainId: ChainId.MATIC,
+      contractAddress: '0x454B666432f76C1DF80867e6BDE8EaFe753D6230',
+      decimals: 18,
+      symbol: 'WETH',
+      name: 'Wrapped Ether',
+    };
+  }
   /**
    * Get WETH token info by chain id
    * @param chainId The chain id
@@ -73,7 +92,11 @@ export class WETH {
         return this.GORLI();
       case ChainId.KOVAN:
         return this.KOVAN();
-      default:
+      case ChainId.MATIC:
+        return this.MATIC();
+      case ChainId.MUMBAI:
+        return this.MUMBAI();
+            default:
         throw new SushiswapError(
           `${chainId} is not allowed`,
           ErrorCodes.tokenChainIdContractDoesNotExist
