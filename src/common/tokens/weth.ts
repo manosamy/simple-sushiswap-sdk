@@ -60,20 +60,20 @@ export class WETH {
   public static MUMBAI() {
     return {
       chainId: ChainId.MUMBAI,
-      contractAddress: '0x454B666432f76C1DF80867e6BDE8EaFe753D6230',
+      contractAddress: '0x9c3c9283d3e44854697cd22d3faa240cfb032889',
       decimals: 18,
-      symbol: 'WETH',
-      name: 'Wrapped Ether',
+      symbol: 'WMATIC',
+      name: 'Wrapped Matic',
     };
   }
 
   public static MATIC() {
     return {
       chainId: ChainId.MATIC,
-      contractAddress: '0x454B666432f76C1DF80867e6BDE8EaFe753D6230',
+      contractAddress: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
       decimals: 18,
-      symbol: 'WETH',
-      name: 'Wrapped Ether',
+      symbol: 'WMATIC',
+      name: 'Wrapped Matic',
     };
   }
   /**
